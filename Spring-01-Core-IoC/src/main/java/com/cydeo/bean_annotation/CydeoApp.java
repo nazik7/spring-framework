@@ -7,10 +7,12 @@ public class CydeoApp {
     public static void main(String[] args) {
         ApplicationContext container = new AnnotationConfigApplicationContext(ConfigApp.class, ConfigAny.class);
         FullTimeMentor ft = container.getBean(FullTimeMentor.class);
+        PartTimeMentor pt = container.getBean("p1",PartTimeMentor.class);
         ft.createAccount();
 
         String str = container.getBean(String.class);
         System.out.println(str);  //str() method is called and prints "Developer"
+        pt.createAccount();
 
     }
 }
