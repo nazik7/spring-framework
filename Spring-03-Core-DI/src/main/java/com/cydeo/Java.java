@@ -12,6 +12,6 @@ public class Java {
         this.officeHours = officeHours;
     }
     public void getTeachingHours(){
-        System.out.println("Weekly Teaching hourse: " +(20 + officeHours.getHours()));
+        System.out.println("Weekly Teaching hours: " +(20 + officeHours.getHours()));
     }
 }
