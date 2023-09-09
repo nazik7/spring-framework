@@ -10,8 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("/mentors")
-public class MentorController {
+@RequestMapping("/another")
+public class AnotherController {
+
     @RequestMapping("/list")
     public String mentorsInfo(Model model){
         List<Mentor> mentorList = new ArrayList<>();
@@ -25,5 +26,4 @@ public class MentorController {
         model.addAttribute("mentors",mentorList);
         return "mentor";
     }
-
 }
