@@ -30,6 +30,6 @@ public class StudentController {
         Student student = new Student(1, "Mike", "Smith");
         model.addAttribute("student", student);
 
-        return "student/welcome";
+        return "welcome";
     }
 }
