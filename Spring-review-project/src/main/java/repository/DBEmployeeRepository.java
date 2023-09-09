@@ -9,9 +9,10 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class DBEmployeeRepository implements EmployeeRepository{
 
-Employee employee;
+
     @Override
     public int getHourlyRate() {
+        Employee employee = new Employee("Jake Philipps","IT", 50);
         return employee.getHourlyRate();
     }
 }

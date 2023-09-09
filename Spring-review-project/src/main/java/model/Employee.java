@@ -1,5 +1,7 @@
 package model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
@@ -7,7 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Getter
 @Setter
-@Component
+@AllArgsConstructor
+
 public class Employee {
     private String name;
     private String department;
