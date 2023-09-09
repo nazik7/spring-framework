@@ -15,4 +15,9 @@ public class HomeController {
         return "welcome.html";
     }
 
+    @RequestMapping("/")  //default, gets called by localhost:8080
+    public String home3(){
+        return "welcome.html";
+    }
+
 }
