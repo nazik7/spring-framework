@@ -36,5 +36,26 @@
   </tbody>
 </table>
 
+<table>
+  <thead>
+  <tr>
+    <td> First Name</td>
+    <td> Last Name </td>
+    <td> Age </td>
+    <td> Gender </td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <!-- <li th:each="student:${students}" th:text="${student.firstName}"></li> -->
+    <td th:each = "mentor:${mentors}" th:text="${mentor.firstName}"> </td>
+    <td th:each = "mentor:${mentors}" th:text="${mentor.lastName}"> </td>
+    <td th:each = "mentor:${mentors}" th:text="${mentors.gender}"> </td>
+    <td th:each = "mentor:${mentors}" th:text="${mentors.age}"> </td>
+
+  </tr>
+  </tbody>
+</table>
+
 </body>
 </html>
