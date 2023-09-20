@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Welcome new Student!</h2>
+<!--Displaying values-->
+<h2 th:text="${students.get(0).firstName}"></h2>
+<h2 th:text="${students.get(0).lastName}"></h2>
+<h2 th:text="${students.get(0).age}"></h2>
+<h2 th:text="${students.get(0).state}"></h2>
+
+<!-- Concatenation-->
+<h2 th:text="${'Welcome ' + students.get(0).firstName}"></h2>
+
+<!--Links-->
+
+</body>
+</html>
