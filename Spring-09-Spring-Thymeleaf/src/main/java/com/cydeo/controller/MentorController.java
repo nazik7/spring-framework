@@ -25,7 +25,7 @@ public class MentorController {
     @PostMapping("/confirm")
     public String registerMentor2(@ModelAttribute("mentor")Mentor mentor, Model model){
         System.out.println(mentor.toString()); //getting mentor object from the view(html) that user input
-        //return "mentor/mentor-confirmation";
-        return "redirect:/mentor/register";
+        return "mentor/mentor-confirmation";
+        //return "redirect:/mentor/register";
     }
 }
