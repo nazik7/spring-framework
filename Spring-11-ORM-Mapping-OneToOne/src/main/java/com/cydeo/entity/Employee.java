@@ -24,7 +24,7 @@ public class Employee extends BaseEntity {
 
     private int salary;
 
-    public Employee(String firstName, String lastName, String email, LocalDate hireDate, Gender gender, int salary) {
+    public Employee(String firstName, String lastName, String email, LocalDate hireDate, int salary, Gender gender) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
