@@ -6,9 +6,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "regions")
-public class Region {
-    @Id
-    private int regionId;
+public class Region extends BaseEntity{
+
     private String region;
     private String country;
 
