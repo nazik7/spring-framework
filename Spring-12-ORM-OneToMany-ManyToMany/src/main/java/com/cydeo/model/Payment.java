@@ -23,6 +23,9 @@ public class Payment{
 
     private BigDecimal amount;
 
+    @ManyToOne
+    private Merchant merchant;
+
     private Status paymentStatus;
     @OneToOne(cascade = CascadeType.ALL)
     private PaymentDetail paymentDetail;
