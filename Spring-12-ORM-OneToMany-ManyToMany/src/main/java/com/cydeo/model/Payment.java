@@ -29,6 +29,8 @@ public class Payment{
     private Status paymentStatus;
     @OneToOne(cascade = CascadeType.ALL)
     private PaymentDetail paymentDetail;
+    @ManyToOne
+    private Customer customer;
 
     public Payment(LocalDate createdDate, BigDecimal amount, Status paymentStatus) {
         this.createdDate = createdDate;
