@@ -3,9 +3,7 @@ package com.cydeo.entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -15,6 +13,7 @@ public class User extends BaseEntity {
     private String email;
     private String password;
     private String userName;
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "account-details_id")
     private Account account;
 }
