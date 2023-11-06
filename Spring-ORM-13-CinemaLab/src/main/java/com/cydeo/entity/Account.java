@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 @Data
-@Table(name = "account_details")
+@Table(name = "account_details ")
 public class Account extends BaseEntity{
     private String name;
     private String address;
