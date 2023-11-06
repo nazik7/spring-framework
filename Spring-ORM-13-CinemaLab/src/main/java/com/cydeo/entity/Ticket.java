@@ -2,7 +2,6 @@ package com.cydeo.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.procedure.spi.ParameterRegistrationImplementor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
