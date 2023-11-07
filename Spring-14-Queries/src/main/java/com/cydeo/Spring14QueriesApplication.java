@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 
 import javax.sql.DataSource;
 
+
 @SpringBootApplication
 public class Spring14QueriesApplication {
 
@@ -16,9 +17,9 @@ public class Spring14QueriesApplication {
     }
 
 
-//    @Bean
-//    public MigrateResult migrateResult(DataSource dataSource){
-//        return Flyway.configure().baselineOnMigrate(true).dataSource(dataSource).load().migrate();
-//    }
+    @Bean
+    public MigrateResult migrateResult(DataSource dataSource){
+        return Flyway.configure().baselineOnMigrate(true).dataSource(dataSource).load().migrate();
+    }
 
 }

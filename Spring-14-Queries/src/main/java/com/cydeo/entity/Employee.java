@@ -12,16 +12,17 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @Table(name = "employees")
-public class Employee {
-    @Id
-    private Integer id;
+public class Employee extends BaseEntity {
     private String firstName;
     private String lastName;
     private String email;
     @Column(columnDefinition = "DATE")
     private LocalDate hireDate;
+
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "department")
     private Department department;
+
     @Enumerated(EnumType.STRING)
     private Gender gender;
     private Long salary;
