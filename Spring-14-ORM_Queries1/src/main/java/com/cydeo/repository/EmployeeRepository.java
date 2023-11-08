@@ -3,6 +3,7 @@ package com.cydeo.repository;
 import com.cydeo.entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import javax.swing.text.html.Option;
 import java.time.LocalDate;
@@ -87,6 +88,10 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     List<Employee> getEmployeeSalaryOrderDesc();
     @Query(value = "select  * from employees where salary ?1", nativeQuery = true)
     List<Employee> readEmployeeDetailBySalary(Long salary);
+    @Query("select e from Employee e where e.salary = :salary")
+    List<Employee> getEmployeeSalary(@Param("salary") Long salary);
+
+
 
 
 
