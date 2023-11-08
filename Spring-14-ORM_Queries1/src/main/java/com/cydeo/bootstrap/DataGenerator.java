@@ -29,6 +29,8 @@ public class DataGenerator implements CommandLineRunner {
         System.out.println("--------Region End---------------");
         System.out.println("--------Department Start--------------");
         System.out.println("findByDepartment: " + departmentRepository.findByDepartment("Toys"));
+        System.out.println("findByDivisionEquals: "+ departmentRepository.findByDivisionEquals("Health"));
+        System.out.println("indDistinctTopByDivisionContaining: "+ departmentRepository.findDistinctTop3ByDivisionContains("Hea"));
         System.out.println("--------Department End--------------");
     }
 }
