@@ -1,6 +1,7 @@
 package com.cydeo.repository;
 
 import com.cydeo.entity.Department;
+import com.cydeo.entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -18,6 +19,10 @@ public interface DepartmentRepository extends JpaRepository<Department, Long> {
     List<Department> findDistinctTop3ByDivisionContains(String pattern);
     @Query("select d from Department d where d.division IN ?1")
     List<Department> getDepartmentDivision(List<String> division);
+
+    List<Department> retrieveDepartmentByDivision(String division); //method defined in META-INF file in 'resources' folder
+    @Query(nativeQuery = true)
+    List<Department> retrieveDepartmentByDivisionContain(String pattern);
 
 
 }
