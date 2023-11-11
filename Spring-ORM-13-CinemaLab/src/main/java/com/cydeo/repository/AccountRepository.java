@@ -58,8 +58,13 @@ public interface AccountRepository extends JpaRepository<Account, Long> {
     // can be containable in the name, address, country, state city
     @Transactional
     @Modifying
-    @Query(value = "select * ",nativeQuery = true)
-    List<Account> findAccount(String name,String address, String country,String state, String city);
+    @Query(value = "select * from account ",nativeQuery = true)
+    List<Account> findAccounts(String name,String address, String country,String state, String city);
 
     //Write a native query to read all accounts with an age lower than a specific value
+    @Transactional
+    @Modifying
+    @Query(value = "select * from account where age > :age",nativeQuery = true)
+    List<Account> findAccountsWithAge(@Param("age") int age);
+
 }
