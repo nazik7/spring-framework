@@ -51,8 +51,8 @@ public interface TicketRepository extends JpaRepository<Ticket, Long> {
     List<String> retrieveAllDistinctMovieNames();
 
     //Write a native query to find all tickets by user email
-    @Query(value = "", nativeQuery = true)
-    List<Ticket> findAllByUserEmail(String email);
+    //@Query(value = "", nativeQuery = true)
+    //List<Ticket> findAllByUserEmail(String email);
 
     //Write a native query that returns all tickets
 
