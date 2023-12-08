@@ -1,11 +1,15 @@
 package entity;
 
-import jakarta.persistence.*;
+
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 
 @Data
 @Entity
 @Table(name = "COURSES")
+@NoArgsConstructor
 public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
