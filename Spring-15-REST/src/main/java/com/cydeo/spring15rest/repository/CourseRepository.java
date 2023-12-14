@@ -1,6 +1,6 @@
-package repository;
+package com.cydeo.spring15rest.repository;
 
-import entity.Course;
+import com.cydeo.spring15rest.entity.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package entity;
+package com.cydeo.spring15rest.entity;
 
 
 import lombok.Data;

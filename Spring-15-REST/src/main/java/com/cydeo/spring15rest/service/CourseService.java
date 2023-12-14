@@ -1,6 +1,6 @@
-package service;
+package com.cydeo.spring15rest.service;
 
-import dto.CourseDTO;
+import com.cydeo.spring15rest.dto.CourseDTO;
 
 import java.util.List;
 

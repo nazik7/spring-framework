@@ -1,4 +1,4 @@
-package dto;
+package com.cydeo.spring15rest.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

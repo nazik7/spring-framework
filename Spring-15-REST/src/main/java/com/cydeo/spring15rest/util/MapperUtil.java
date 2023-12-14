@@ -1,4 +1,4 @@
-package util;
+package com.cydeo.spring15rest.util;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;

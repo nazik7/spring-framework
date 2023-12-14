@@ -1,11 +1,11 @@
-package service.impl;
+package com.cydeo.spring15rest.service.impl;
 
-import dto.CourseDTO;
-import entity.Course;
+import com.cydeo.spring15rest.dto.CourseDTO;
+import com.cydeo.spring15rest.entity.Course;
+import com.cydeo.spring15rest.repository.CourseRepository;
+import com.cydeo.spring15rest.service.CourseService;
 import org.springframework.stereotype.Service;
-import repository.CourseRepository;
-import service.CourseService;
-import util.MapperUtil;
+import com.cydeo.spring15rest.util.MapperUtil;
 
 import java.util.List;
 import java.util.stream.Collectors;
