@@ -1,0 +1,36 @@
+package com.cydeo.entity;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+
+@Entity
+@Setter
+@Getter
+@NoArgsConstructor
+@Table(name = "user_account")
+
+public class User extends BaseEntity {
+
+    private String email;
+    private String password;
+    private String username;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "account_details_id")
+    @JsonManagedReference //is the forward part of the reference
+    private Account account;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", username='" + username + '\'' +
+                '}';
+    }
+}
