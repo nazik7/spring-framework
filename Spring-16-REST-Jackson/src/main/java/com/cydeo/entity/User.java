@@ -1,6 +1,7 @@
 package com.cydeo.entity;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
@@ -13,10 +14,11 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @Table(name = "user_account")
-
+@JsonIgnoreProperties(value = "{hibernateLazyInitializer",ignoreUnknown = true)
 public class User extends BaseEntity {
 
     private String email;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     private String username;
 
