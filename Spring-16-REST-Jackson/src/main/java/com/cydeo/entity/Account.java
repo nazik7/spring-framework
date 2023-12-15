@@ -2,6 +2,7 @@ package com.cydeo.entity;
 
 import com.cydeo.enums.UserRole;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -16,10 +17,12 @@ import lombok.Setter;
 @JsonIgnoreProperties(value = {"state", "postalCode"}, ignoreUnknown = true)
 public class Account extends BaseEntity{
     private String name;
+    @JsonIgnore
     private String address;
     private String country;
     private String state;
     private String city;
+    @Column(name = "postal_code")
     private String postalCode;
     private Integer age;
     @Enumerated(EnumType.STRING)
@@ -29,17 +32,4 @@ public class Account extends BaseEntity{
     @JsonBackReference //is the back part of the reference, will be omitted from serialization
     private User user;
 
-    @Override
-    public String toString() {
-        return "Account{" +
-                "name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", country='" + country + '\'' +
-                ", state='" + state + '\'' +
-                ", city='" + city + '\'' +
-                ", postalCode='" + postalCode + '\'' +
-                ", age=" + age +
-                ", role=" + role +
-                '}';
-    }
 }

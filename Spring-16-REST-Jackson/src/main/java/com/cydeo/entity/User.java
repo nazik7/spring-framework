@@ -18,6 +18,7 @@ import lombok.Setter;
 public class User extends BaseEntity {
 
     private String email;
+
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
     private String username;
@@ -27,12 +28,4 @@ public class User extends BaseEntity {
     @JsonManagedReference //is the forward part of the reference
     private Account account;
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", username='" + username + '\'' +
-                '}';
-    }
 }

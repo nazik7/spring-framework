@@ -18,10 +18,4 @@ public class Genre extends BaseEntity{
     @JsonIgnore
     private List<Movie> movie;
 
-    @Override
-    public String toString() {
-        return "Genre{" +
-                "name='" + name + '\'' +
-                '}';
-    }
 }
