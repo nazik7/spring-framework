@@ -10,22 +10,22 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     // ------------------- DERIVED QUERIES ------------------- //
-
-    //Write a derived query to read a user with an email?
-    Optional<User> findByEmail(String email);
-
-
-    //Write a derived query to read a user with an username?
-    Optional<User> getUserByUsername(String username);
-
-    //Write a derived query to list all users that contain a specific name?
-    List<User> findAllByAccountContains(String name);
-
-    //Write a derived query to list all users that contain a specific name in the ignore case mode?
-    List<User> findAllByAccountNameContainingIgnoreCase(String name);
-
-    //Write a derived query to list all users with an age greater than a specified age?
-    List<User> findAllByAccount_AgeGreaterThan(int age);
+//
+//    //Write a derived query to read a user with an email?
+//    Optional<User> findByEmail(String email);
+//
+//
+//    //Write a derived query to read a user with an username?
+//    Optional<User> getUserByUsername(String username);
+//
+//    //Write a derived query to list all users that contain a specific name?
+//    List<User> findAllByAccountContains(String name);
+//
+//    //Write a derived query to list all users that contain a specific name in the ignore case mode?
+//    List<User> findAllByAccountNameContainingIgnoreCase(String name);
+//
+//    //Write a derived query to list all users with an age greater than a specified age?
+//    List<User> findAllByAccount_AgeGreaterThan(int age);
 
     // ------------------- JPQL QUERIES ------------------- //
 

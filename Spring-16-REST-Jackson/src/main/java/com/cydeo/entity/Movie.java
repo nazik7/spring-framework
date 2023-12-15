@@ -15,6 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
+@Table(name = "movie")
 public class Movie extends BaseEntity{
     private String name;
     @Column(columnDefinition = "DATE")
