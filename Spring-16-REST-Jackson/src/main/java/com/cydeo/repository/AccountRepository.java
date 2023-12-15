@@ -10,28 +10,28 @@ import java.util.List;
 
 public interface AccountRepository extends JpaRepository<Account, Long> {
 
-    // ------------------- DERIVED QUERIES ------------------- //
-
-    //Write a derived query to list all accounts with a specific country or state
-    List<Account> findAllByCountryOrState(String country, String state);
-
-    //Write a derived query to list all accounts with age lower than or equal to a specific value
-    List<Account> findAccountByAgeLessThanEqual(int age);
-
-    //Write a derived query to list all accounts with a specific role
-    List<Account> findAccountByRole(UserRole role);
-    //findAllByRole(UserRole role);
-
-    //Write a derived query to list all accounts between a range of ages
-    List<Account> findAccountByAgeBetween(int age1, int age2);
-    //List<Account> findAllByAgeBetween(int age1, int age2);
-
-    //Write a derived query to list all accounts where the beginning of the address contains the keyword
-    List<Account> findAccountByAddressStartingWith(String pattern);
-    //List<Account> findAllByAddressStartingWith(String pattern);
-
-    //Write a derived query to sort the list of accounts with age
-    List<Account> findAccountByOrderByAge();
+//    // ------------------- DERIVED QUERIES ------------------- //
+//
+//    //Write a derived query to list all accounts with a specific country or state
+//    List<Account> findAllByCountryOrState(String country, String state);
+//
+//    //Write a derived query to list all accounts with age lower than or equal to a specific value
+//    List<Account> findAccountByAgeLessThanEqual(int age);
+//
+//    //Write a derived query to list all accounts with a specific role
+//    List<Account> findAccountByRole(UserRole role);
+//    //findAllByRole(UserRole role);
+//
+//    //Write a derived query to list all accounts between a range of ages
+//    List<Account> findAccountByAgeBetween(int age1, int age2);
+//    //List<Account> findAllByAgeBetween(int age1, int age2);
+//
+//    //Write a derived query to list all accounts where the beginning of the address contains the keyword
+//    List<Account> findAccountByAddressStartingWith(String pattern);
+//    //List<Account> findAllByAddressStartingWith(String pattern);
+//
+//    //Write a derived query to sort the list of accounts with age
+//    List<Account> findAccountByOrderByAge();
 
     // ------------------- JPQL QUERIES ------------------- //
 

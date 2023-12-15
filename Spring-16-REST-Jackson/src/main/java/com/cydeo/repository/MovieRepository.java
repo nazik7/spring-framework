@@ -15,20 +15,20 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 
     // ------------------- DERIVED QUERIES ------------------- //
 
-    //Write a derived query to read a movie with a name
-    Optional<Movie> findMovieByName(String name);
-
-    //Write a derived query to list all movies between a range of prices
-    List<Movie> findAllByPriceBetween(BigDecimal price1, BigDecimal price2);
-
-    //Write a derived query to list all movies where duration exists in the specific list of duration
-    List<Movie> findAllByDurationIn(List<Integer> durationList);
-
-    //Write a derived query to list all movies with higher than a specific release date
-    List<Movie> findAllByReleaseDateAfter(LocalDate releaseDate);
-
-    //Write a derived query to list all movies with a specific state and type
-    List<Movie> findAllByStateAndType(MovieState state, MovieType type);
+//    //Write a derived query to read a movie with a name
+//    Optional<Movie> findMovieByName(String name);
+//
+//    //Write a derived query to list all movies between a range of prices
+//    List<Movie> findAllByPriceBetween(BigDecimal price1, BigDecimal price2);
+//
+//    //Write a derived query to list all movies where duration exists in the specific list of duration
+//    List<Movie> findAllByDurationIn(List<Integer> durationList);
+//
+//    //Write a derived query to list all movies with higher than a specific release date
+//    List<Movie> findAllByReleaseDateAfter(LocalDate releaseDate);
+//
+//    //Write a derived query to list all movies with a specific state and type
+//    List<Movie> findAllByStateAndType(MovieState state, MovieType type);
 
     // ------------------- JPQL QUERIES ------------------- //
 
