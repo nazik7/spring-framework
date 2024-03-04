@@ -15,16 +15,45 @@ import java.util.List;
 public class LoggingAspect {
     Logger logger = LoggerFactory.getLogger(LoggingAspect.class);
 
-    @Pointcut("execution(* com.cydeo.controller.CourseController.*(..))") //want to get all methods from CourseController
-    private void pointcut(){
-    }
-    @Before("pointcut()")
-    public void log(){
-        logger.info("Logger info -----");
-    }
+//    @Pointcut("execution(* com.cydeo.controller.CourseController.*(..))") //want to get all methods from CourseController
+//    private void pointcut(){
+//    }
+//    @Before("pointcut()")
+//    public void log(){
+//        logger.info("Logger info -----");
+//    }
+//
+//    @Before("execution(* com.cydeo.controller.CourseController.*(..))")
+//    public void beforeAdvice(){
+//        logger.info("Logger info --------");
+//    }
 
-    @Before("execution(* com.cydeo.controller.CourseController.*(..))")
-    public void beforeAdvice(){
-        logger.info("Logger info --------");
+//    @Pointcut("execution(* com.cydeo.repository.CourseRepository.findById(*))")
+//    public void anyProductRepositoryFindById(){}
+//
+//    @Before("anyProductRepositoryFindById()")
+//    public void beforeCourseRepoOperation(JoinPoint joinPoint){
+//        logger.info("Before (findById) -> Method:{} -Arguments:{} - Target: {}", joinPoint, joinPoint.getArgs(),joinPoint.getTarget());
+//    }
+
+//    @Pointcut("within(com.cydeo.controller..*)")
+//    private void anyControllerOperation(){}
+//
+//    @Pointcut("@within(org.springframework.stereotype.Service)")
+//    private void anyServiceOperation(){
+//
+//    }
+//
+//    @Before("anyControllerOperation() || anyServiceOperation()")
+//    public void beforeControllerAdvice(JoinPoint joinPoint){
+//        logger.info("Before () -> Method: {} - Arguments :{} - Target: {}", joinPoint, joinPoint.getArgs(), joinPoint.getTarget());
+//    }
+
+    @Pointcut("@annotation(org.springframework.web.bind.annotation.DeleteMapping)")
+    private void anyDeleteCourseOperation(){}
+
+    @Before("anyDeleteCourseOperation()")
+    public void beforeControllerAdvice(JoinPoint joinPoint){
+        logger.info("Before () -> Method: {} - Arguments :{} - Target: {}", joinPoint, joinPoint.getArgs(), joinPoint.getTarget());
     }
 }
