@@ -49,11 +49,33 @@ public class LoggingAspect {
 //        logger.info("Before () -> Method: {} - Arguments :{} - Target: {}", joinPoint, joinPoint.getArgs(), joinPoint.getTarget());
 //    }
 
-    @Pointcut("@annotation(org.springframework.web.bind.annotation.DeleteMapping)")
-    private void anyDeleteCourseOperation(){}
+//    @Pointcut("@annotation(org.springframework.web.bind.annotation.DeleteMapping)")
+//    private void anyDeleteCourseOperation(){}
+//
+//    @Before("anyDeleteCourseOperation()")
+//    public void beforeControllerAdvice(JoinPoint joinPoint){
+//        logger.info("Before () -> Method: {} - Arguments :{} - Target: {}", joinPoint, joinPoint.getArgs(), joinPoint.getTarget());
+//    }
 
-    @Before("anyDeleteCourseOperation()")
-    public void beforeControllerAdvice(JoinPoint joinPoint){
-        logger.info("Before () -> Method: {} - Arguments :{} - Target: {}", joinPoint, joinPoint.getArgs(), joinPoint.getTarget());
-    }
+//    @Pointcut("@annotation(org.springframework.web.bind.annotation.DeleteMapping)")
+//    private void anyDeleteCourseOperation(){}
+//
+//    @Before("anyDeleteCourseOperation()")
+//    public void beforeControllerAdvice(JoinPoint joinPoint){
+//        logger.info("Before () -> Method: {} - Arguments :{} - Target: {}", joinPoint, joinPoint.getArgs(), joinPoint.getTarget());
+//    }
+    @Pointcut("@annotation(org.springframework.web.bind.annotation.GetMapping)")
+    private void anyGetCourseOperation(){}
+
+//    @AfterReturning(pointcut = "anyGetCourseOperation()", returning = "result")
+//    public void afterReturningControllerAdvice(JoinPoint joinPoint, Object result ){
+//        logger.info("After returning(List) -> Method:{} - result{}", joinPoint.getSignature().toShortString(),result.toString());
+//    }
+//    @AfterReturning(pointcut = "anyGetCourseOperation()", returning = "result")
+//    public void afterReturningControllerAdvice(JoinPoint joinPoint, List<Object> result ){
+//        logger.info("After returning(List) -> Method:{} - result{}", joinPoint.getSignature().toShortString(),result.toString());
+//    }
+
+    @AfterThrowing(pointcut = "anyGetCourseOpeartion()", throwing = "exception")
+    public void
 }
